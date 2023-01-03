@@ -1,22 +1,42 @@
-import { StyleSheet, Text, View } from "react-native";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
+import { Ionicons } from "@expo/vector-icons";
+//Import Screens
 import HomeScreen from "./HomeScreen";
 import WorkOutScreen from "./WorkOutScreen";
-import Setting from "./SettingScreen";
+import Setting from "./AccountScreen";
+import { GlobalStyles } from "../../constants/styles";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
 function OverallContainer() {
   return (
-    <BottomTabs.Navigator>
-      <BottomTabs.Screen name="Home" component={HomeScreen} />
-      <BottomTabs.Screen name="WorkOuts" component={WorkOutScreen} />
-      <BottomTabs.Screen name="Setting" component={Setting} />
+    <BottomTabs.Navigator
+      screenOptions={{
+        headerStyle: { backgroundColor: GlobalStyles.colors.MainColor },
+        tabBarStyle: {
+          backgroundColor: GlobalStyles.colors.TabBarBackgroundColor,
+        },
+        tabBarActiveTintColor: GlobalStyles.colors.TabBarActiveColor,
+      }}
+    >
+      <BottomTabs.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <BottomTabs.Screen
+        name="WorkOuts"
+        component={WorkOutScreen}
+        options={{ headerShown: false }}
+      />
+      <BottomTabs.Screen
+        name="Account"
+        component={Setting}
+        options={{ headerShown: false }}
+      />
     </BottomTabs.Navigator>
   );
 }
@@ -26,20 +46,15 @@ function BaseContainer() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Container" component={OverallContainer} />
+          <Stack.Screen
+            name="Container"
+            component={OverallContainer}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
 
 export default BaseContainer;

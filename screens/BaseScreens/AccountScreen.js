@@ -1,13 +1,10 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { GlobalStyles } from "../../constants/styles";
-
-function HomeScreen() {
-    return (
-        <View style={styles.container}></View>
-    )
+function AccountScreen() {
+  return <View style={styles.container}></View>;
 }
 
-export default HomeScreen;
+export default AccountScreen;
 
 const styles = StyleSheet.create({
   container: {
