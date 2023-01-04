@@ -1,5 +1,3 @@
-
-
 export const GlobalStyles = {
   colors: {
     MainColor: "#4A4848",
@@ -7,6 +5,6 @@ export const GlobalStyles = {
     TabBarBackgroundColor: "#242424",
     TabBarActiveColor: "#FFFFFF",
     GraphBackgroundContainer: "#1F1E1E",
+    textcolor: "#FFFFFF",
   },
-  
 };
