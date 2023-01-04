@@ -1,6 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { GlobalStyles } from "../../constants/styles";
+
+//import Icons
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -8,7 +11,6 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import HomeScreen from "./HomeScreen";
 import WorkOutScreen from "./WorkOutScreen";
 import Setting from "./AccountScreen";
-import { GlobalStyles } from "../../constants/styles";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();

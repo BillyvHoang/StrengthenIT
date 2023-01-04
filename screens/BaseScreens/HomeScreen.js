@@ -1,17 +1,15 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import { GlobalStyles } from "../../constants/styles";
+import { Pressable, ScrollView, Text, View } from "react-native";
+
+import HomeScreenHeader from "../HomeScreenFormats/ScreenHeader";
+import Graph from "../HomeScreenFormats/Graph";
 
 function HomeScreen() {
-    return (
-        <View style={styles.container}></View>
-    )
+  return (
+    <>
+      <HomeScreenHeader />
+      <Graph />
+    </>
+  );
 }
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: GlobalStyles.colors.MainColor,
-  },
-});
