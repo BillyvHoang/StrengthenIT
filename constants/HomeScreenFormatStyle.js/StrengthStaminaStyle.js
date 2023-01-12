@@ -6,7 +6,7 @@ export const StrengthStaminaStyle = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignContent: "center",
-    marginHorizontal: 20,
+    marginHorizontal: 10,
     padding: 5,
   },
 
@@ -18,5 +18,11 @@ export const StrengthStaminaStyle = StyleSheet.create({
   Textcolor: {
     color: "white",
     fontSize: 25,
+  },
+
+  Button: {
+    width: 100,
+    height: 50,
+    backgroundColor: "black",
   },
 });

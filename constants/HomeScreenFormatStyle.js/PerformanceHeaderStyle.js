@@ -1,20 +1,19 @@
 import { StyleSheet } from "react-native";
 import { GlobalStyles } from "../styles";
 
-export const SelectDateStyle = StyleSheet.create({
+export const PHStyle = StyleSheet.create({
   homeContainer: {
+    paddingTop: 20,
+    paddingHorizontal: 15,
     backgroundColor: GlobalStyles.colors.MainColor,
   },
-  dateContainer: {
+  TopRowContainer: {
     flexDirection: "row",
-    padding: 1,
     justifyContent: "space-between",
-    marginHorizontal: 30,
-    backgroundColor: GlobalStyles.colors.MainColor,
+    alignItems: "center",
   },
-  Textsize: {
+  Textcolor: {
     color: "white",
-    fontWeight: "bold",
-    fontSize: 15,
+    fontSize: 12,
   },
 });

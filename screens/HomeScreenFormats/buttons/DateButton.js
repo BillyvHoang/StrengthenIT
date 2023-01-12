@@ -7,7 +7,14 @@ function DateButton({ children }) {
   }
 
   return (
-    <Pressable onPress={presshandler}>
+    <Pressable
+      style={({ pressed }) =>
+        pressed
+          ? [styles.buttonInnerContainer, styles.pressed]
+          : styles.buttonInnerContainer
+      }
+      onPress={presshandler}
+    >
       <View>
         <Text style={styles.Textsize}>{children}</Text>
       </View>
@@ -22,5 +29,25 @@ export const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     fontSize: 15,
+  },
+
+  buttonInnerContainer1: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 15,
+    padding: 12,
+    backgroundColor: "#1F1E1E",
+  },
+
+  buttonInnerContainer: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 15,
+    padding: 12,
+    borderRadius: 10,
+  },
+  pressed: {
+    opacity: 0.75,
+    backgroundColor: "#1F1E1E",
   },
 });

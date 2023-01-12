@@ -6,7 +6,9 @@ function StrengthStamina() {
   return (
     <View style={StrengthStaminaStyle.homeContainer}>
       <View style={StrengthStaminaStyle.buttonContainer}>
-        <SelectButton>Strength</SelectButton>
+        <SelectButton style={StrengthStaminaStyle.Button}>
+          Strength
+        </SelectButton>
         <SelectButton>Stamina</SelectButton>
       </View>
     </View>

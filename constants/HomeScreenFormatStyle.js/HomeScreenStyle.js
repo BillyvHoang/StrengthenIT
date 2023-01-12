@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { GlobalStyles } from "../constants/styles";
+import { GlobalStyles } from "../styles";
 
 export const Homestyles = StyleSheet.create({
   homeContainer: {

@@ -4,6 +4,9 @@ import HomeScreenHeader from "../HomeScreenFormats/ScreenHeader";
 import Graph from "../HomeScreenFormats/Graph";
 import SelectDate from "../HomeScreenFormats/SelectDate";
 import StrengthStamina from "../HomeScreenFormats/Strength&Stamina";
+import PerformanceHeader from "../HomeScreenFormats/PerformanceHeader";
+import OverallPR from "../HomeScreenFormats/PerformanceHeaderColumn/OverallPR";
+
 function HomeScreen() {
   return (
     <>
@@ -11,6 +14,8 @@ function HomeScreen() {
       <Graph />
       <SelectDate />
       <StrengthStamina />
+      <PerformanceHeader />
+      <OverallPR />
     </>
   );
 }
